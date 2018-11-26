@@ -1,7 +1,7 @@
 import { Directive } from "@angular/core";
 
 @Directive({
-  selector: 'tooltip'
+  selector: '[tooltip]'
 })
 export class TooltipDirective {
   // code here
