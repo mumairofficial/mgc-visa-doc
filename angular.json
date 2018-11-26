@@ -31,16 +31,8 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "node_modules/popper.js/dist/popper.min.js",
-              "src/assets/js/autosize.min.js",
-              "src/assets/js/prism.min.js",
-              "src/assets/js/draggable.bundle.legacy.js",
-              "src/assets/js/swap-animations.js",
-              "src/assets/js/dropzone.min.js",
-              "src/assets/js/list.min.js",
-              "src/assets/js/theme.js"
+              "node_modules/jquery/dist/jquery.slim.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
