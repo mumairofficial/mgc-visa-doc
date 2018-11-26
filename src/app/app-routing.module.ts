@@ -13,16 +13,16 @@ const routes: Routes = [
   },
 
   // un-authorized pages
-  // {
-  //   path: '',
-  //   component: BlankLayoutComponent,
-  //   children: [
-  //     {
-  //       path: 'login',
-  //       component: null
-  //     }
-  //   ]
-  // },
+  {
+    path: '',
+    component: BlankLayoutComponent,
+    children: [
+      {
+        path: 'auth',
+        loadChildren: './pages/auth/auth.module#AuthModule'
+      }
+    ]
+  },
 
   // for authorized pages
   {
@@ -32,17 +32,24 @@ const routes: Routes = [
     children: [
       {
         path: 'overview',
-        component: OverviewComponent,
+        component: OverviewComponent
       }
     ]
   },
 
+  // error pages
+  {
+    path: 'error',
+    component: BlankLayoutComponent,
+    loadChildren: './pages/error/error.module#ErrorModule'
+  },
+
   // other than defined path
-  { path: '**', redirectTo: 'dashboard' }
+  { path: '**', redirectTo: 'error/404' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
