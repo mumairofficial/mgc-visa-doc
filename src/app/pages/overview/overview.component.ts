@@ -9,17 +9,17 @@ export class OverviewComponent {
     {
       url: '/overview',
       title: 'Overview',
-      active: false
-    },
-    {
-      url: '/app-pages',
-      title: 'App Pages',
-      active: false
-    },
-    {
-      url: '',
-      title: 'Team',
       active: true
-    }
+    },
+    // {
+    //   url: '/app-pages',
+    //   title: 'App Pages',
+    //   active: false
+    // },
+    // {
+    //   url: '',
+    //   title: 'Team',
+    //   active: true
+    // }
   ];
 }
