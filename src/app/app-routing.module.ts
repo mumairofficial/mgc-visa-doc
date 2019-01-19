@@ -33,6 +33,10 @@ const routes: Routes = [
       {
         path: 'overview',
         component: OverviewComponent
+      },
+      {
+        path: 'system',
+        loadChildren: './pages/system/system.module#SystemModule'
       }
     ]
   },

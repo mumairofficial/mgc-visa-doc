@@ -5,12 +5,15 @@ import { Directive, ElementRef, Input, Renderer2, AfterViewInit } from '@angular
 })
 export class TooltipDirective implements AfterViewInit {
   el: ElementRef;
-  @Input() tooltip;
+  @Input() tooltip = '';
 
   constructor(private elementRef: ElementRef, private renderer: Renderer2) {
   }
 
   ngAfterViewInit() {
+    if (this.tooltip === undefined) {
+      this.tooltip = '';
+    }
     this.renderer.setAttribute(this.elementRef.nativeElement, 'data-toggle', 'tooltip');
     this.renderer.setAttribute(this.elementRef.nativeElement, 'data-title', this.tooltip);
   }
