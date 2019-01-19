@@ -8,6 +8,7 @@ import { ContentSectionComponent } from './content-section/content-section.compo
 import { BadgeComponent } from './badge/badge.component';
 import { AvatarsListComponent } from './avatars-list/avatars-list.component';
 import { DirectiveModule } from '../directives/directives.module';
+import {PageHeaderComponent} from '@shared/components/page-header/page-header.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule, DirectiveModule],
@@ -16,7 +17,8 @@ import { DirectiveModule } from '../directives/directives.module';
     ContentWrapperComponent,
     ContentSectionComponent,
     BadgeComponent,
-    AvatarsListComponent
+    AvatarsListComponent,
+    PageHeaderComponent
   ],
   exports: [
     BreadCrumbComponent,
@@ -24,6 +26,7 @@ import { DirectiveModule } from '../directives/directives.module';
     ContentSectionComponent,
     BadgeComponent,
     AvatarsListComponent,
+    PageHeaderComponent,
 
     DirectiveModule
   ]

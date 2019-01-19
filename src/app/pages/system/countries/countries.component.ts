@@ -1,12 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import {BreadCrumb} from '@shared/models';
 
 @Component({
-    selector: 'app-system-countries-component',
-    templateUrl: 'countries.component.html'
+  selector: 'app-system-countries-component',
+  templateUrl: 'countries.component.html'
 })
-
 export class CountriesComponent implements OnInit {
-    constructor() { }
+  breadCrumb: Array<BreadCrumb> = [
+    {
+      title: 'System',
+      url: '/system/countries',
+      active: false
+    },
+    {
+      title: 'Countries',
+      url: '/system/countries',
+      active: true
+    },
+  ];
 
-    ngOnInit() { }
+  constructor() {}
+
+  ngOnInit() {}
 }

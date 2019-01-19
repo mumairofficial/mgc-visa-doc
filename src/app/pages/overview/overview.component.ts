@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { Image } from 'src/app/shared/models/image.model';
+import {BreadCrumb, Image} from '@shared/models';
 
 @Component({
   selector: 'app-overview',
   templateUrl: 'overview.component.html'
 })
 export class OverviewComponent {
-  public breadCrumb = [
+  public breadCrumb: Array<BreadCrumb
+    > = [
     {
       url: '/overview',
       title: 'Overview',
