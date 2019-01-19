@@ -1,1 +1,31 @@
 <app-bread-crumb [items]="breadcrumb"></app-bread-crumb>
+
+<content-wrapper>
+  <page-header>
+    <h2>Burger Rare ☕</h2>
+    <p class="lead">A small web studio crafting lovely template products.</p>
+  </page-header>
+
+  <hr>
+
+  <div class="content-list">
+    <div class="row content-list-head">
+      <div class="col-auto">
+        <h3>Projects</h3>
+        <button class="btn btn-round" data-toggle="modal" data-target="#user-invite-modal">
+          <i class="material-icons">add</i>
+        </button>
+      </div>
+      <div class="col-md-auto">
+        <div class="input-group input-group-round">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="material-icons">filter_list</i>
+            </span>
+          </div>
+          <input type="search" class="form-control filter-list-input" placeholder="Filter projects" aria-label="Filter User" aria-describedby="filter-projects">
+        </div>
+      </div>
+    </div>
+  </div>
+</content-wrapper>
