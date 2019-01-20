@@ -1,18 +1,19 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { SettingsLayoutComponent } from "./components/layout/settings-layout.component";
 
 const routes: Routes = [
   {
     path: '',
-    component: null,
+    component: SettingsLayoutComponent,
     children: [
       {
         path: 'profile',
-        loadChildren: ''
+        loadChildren: './profile/profile.module#ProfileModule'
       },
       {
         path: 'password',
-        loadChildren: ''
+        loadChildren: './password/password.module#PasswordModule'
       }
     ]
   }
