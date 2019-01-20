@@ -8,6 +8,11 @@ import {BreadCrumb} from '@shared/models';
 export class UserManagementComponent {
   breadcrumb: Array<BreadCrumb> = [
     {
+      title: 'Overview',
+      url: '/overview',
+      active: false
+    },
+    {
       title: 'System',
       url: '/system/user-management',
       active: false

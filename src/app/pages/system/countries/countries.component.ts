@@ -8,6 +8,11 @@ import {BreadCrumb} from '@shared/models';
 export class CountriesComponent implements OnInit {
   breadCrumb: Array<BreadCrumb> = [
     {
+      title: 'Overview',
+      url: '/overview',
+      active: false
+    },
+    {
       title: 'System',
       url: '/system/countries',
       active: false

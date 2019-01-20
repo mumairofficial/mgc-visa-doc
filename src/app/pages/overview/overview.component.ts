@@ -6,8 +6,7 @@ import {BreadCrumb, Image} from '@shared/models';
   templateUrl: 'overview.component.html'
 })
 export class OverviewComponent {
-  public breadCrumb: Array<BreadCrumb
-    > = [
+  public breadCrumb: Array<BreadCrumb> = [
     {
       url: '/overview',
       title: 'Overview',

@@ -37,6 +37,14 @@ const routes: Routes = [
       {
         path: 'system',
         loadChildren: './pages/system/system.module#SystemModule'
+      },
+      {
+        path: 'employees',
+        loadChildren: './pages/employees/employees.module#EmployeesModule'
+      },
+      {
+        path: 'visa-applications',
+        loadChildren: './pages/visa-applications/visa-applications.module#VisaApplicationsModule'
       }
     ]
   },
@@ -49,7 +57,8 @@ const routes: Routes = [
   },
 
   // other than defined path
-  { path: '**', redirectTo: 'error/404' }
+  // { path: '**', redirectTo: 'error/404' }
+  { path: '**', redirectTo: 'overview' }
 ];
 
 @NgModule({

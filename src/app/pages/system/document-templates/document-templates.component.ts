@@ -9,6 +9,11 @@ export class DocumentTemplatesComponent {
 
   breadcrumb: Array<BreadCrumb> = [
     {
+      title: 'Overview',
+      url: '/overview',
+      active: false
+    },
+    {
       title: 'System',
       url: '/system/document-templates',
       active: false
