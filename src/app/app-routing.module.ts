@@ -31,6 +31,10 @@ const routes: Routes = [
     canActivate: [],
     children: [
       {
+        path: 'settings',
+        loadChildren: './pages/settings/settings.module#SettingsModule'
+      },
+      {
         path: 'overview',
         component: OverviewComponent
       },
