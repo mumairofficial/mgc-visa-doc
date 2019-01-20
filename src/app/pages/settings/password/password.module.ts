@@ -17,6 +17,6 @@ export class PasswordRoutingModule {}
 
 @NgModule({
   declarations: [ PasswordComponent ],
-  imports: [ SharedModule, PasswordRoutingModule ]
+  imports: [ SharedModule, PasswordRoutingModule ],
 })
 export class PasswordModule {}

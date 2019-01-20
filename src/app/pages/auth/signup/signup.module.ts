@@ -16,6 +16,7 @@ export class SignUpRoutingModule {}
 
 // Activate Module
 @NgModule({
+  declarations: [ SignUpComponent ],
   imports: [SignUpRoutingModule]
 })
 export class SignUpModule {}

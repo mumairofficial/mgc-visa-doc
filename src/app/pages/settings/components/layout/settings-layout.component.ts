@@ -1,9 +1,10 @@
 import { Component } from "@angular/core";
+import { SettingsService } from "../../settings.service";
 
 @Component({
   selector: 'app-settings-page-layout',
   template: `
-    <app-bread-crumb [items]=""></app-bread-crumb>
+    <app-bread-crumb [items]="settingService.breadCrumb"></app-bread-crumb>
     <div class="container">
       <div class="row justify-content-center mt-5">
         <div class="col-lg-3 mb-3">
@@ -21,4 +22,6 @@ import { Component } from "@angular/core";
     </div>
   `
 })
-export class SettingsLayoutComponent {}
+export class SettingsLayoutComponent {
+  constructor(public settingService: SettingsService) {}
+}

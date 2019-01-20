@@ -16,6 +16,7 @@ export class ForgotPasswordRoutingModule {}
 
 // Activate Module
 @NgModule({
+  declarations: [ ForgotPasswordComponent ],
   imports: [ForgotPasswordRoutingModule]
 })
 export class ForgotPasswordModule {}

@@ -16,6 +16,7 @@ export class ActivateRoutingModule {}
 
 // Activate Module
 @NgModule({
+  declarations: [ActivateComponent],
   imports: [ActivateRoutingModule]
 })
 export class ActivateModule {}

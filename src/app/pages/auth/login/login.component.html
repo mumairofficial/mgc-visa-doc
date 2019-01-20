@@ -3,7 +3,7 @@
     <div class="text-center">
       <h1 class="h2">Welcome Back 👋</h1>
       <p class="lead">Log in to your account to continue</p>
-      <form>
+      <form [formGroup]="">
         <div class="form-group">
           <input class="form-control" type="email" placeholder="Email Address" name="login-email">
         </div>
@@ -15,7 +15,7 @@
             </small>
           </div>
         </div>
-        <button class="btn btn-lg btn-block btn-primary" role="button" type="submit">
+        <button class="btn btn-lg btn-block btn-primary" role="button" type="submit" (click)="redirectToOverview()">
           Log in
         </button>
         <small>Don't have an account yet? <a href="#">Create one</a>
