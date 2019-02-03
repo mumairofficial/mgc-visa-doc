@@ -8,7 +8,9 @@ import { ContentSectionComponent } from './content-section/content-section.compo
 import { BadgeComponent } from './badge/badge.component';
 import { AvatarsListComponent } from './avatars-list/avatars-list.component';
 import { DirectiveModule } from '../directives/directives.module';
-import {PageHeaderComponent} from '@shared/components/page-header/page-header.component';
+import { PageHeaderComponent } from '@shared/components/page-header/page-header.component';
+
+import * as baseModal from './base-modal';
 
 @NgModule({
   imports: [CommonModule, RouterModule, DirectiveModule],
@@ -18,7 +20,10 @@ import {PageHeaderComponent} from '@shared/components/page-header/page-header.co
     ContentSectionComponent,
     BadgeComponent,
     AvatarsListComponent,
-    PageHeaderComponent
+    PageHeaderComponent,
+    baseModal.BaseModal,
+    baseModal.ModalBodyComponent,
+    baseModal.ModalFooterComponent,
   ],
   exports: [
     BreadCrumbComponent,
@@ -27,7 +32,9 @@ import {PageHeaderComponent} from '@shared/components/page-header/page-header.co
     BadgeComponent,
     AvatarsListComponent,
     PageHeaderComponent,
-
+    baseModal.BaseModal,
+    baseModal.ModalBodyComponent,
+    baseModal.ModalFooterComponent,
     DirectiveModule
   ]
 })
