@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {BreadCrumb} from '@shared/models';
+import { BaseModal } from '@shared/components/base-modal';
 
 @Component({
   selector: 'app-system-countries-component',
@@ -24,7 +25,13 @@ export class CountriesComponent implements OnInit {
     },
   ];
 
+  @ViewChild('countryModal') countryModal: BaseModal;
+
   constructor() {}
 
   ngOnInit() {}
+
+  onCountryModalOpen() {
+    this.countryModal.show();
+  }
 }
