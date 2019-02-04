@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {SharedModule} from '@shared/shared.module';
 
 import {NewApplicationComponent} from './new-application.component';
+import { EmployeeSelectionModalComponent } from '../components/employee-selection-modal/employee-selection-modal.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,7 @@ export class NewApplicationRoutingModule {}
 
 
 @NgModule({
-  declarations: [ NewApplicationComponent ],
+  declarations: [ NewApplicationComponent, EmployeeSelectionModalComponent ],
   imports: [ SharedModule, NewApplicationRoutingModule ]
 })
 export class NewApplicationModule {}

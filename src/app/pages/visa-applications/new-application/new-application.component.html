@@ -1,5 +1,33 @@
 <app-bread-crumb [items]="breadCrumb"></app-bread-crumb>
 
-<p>
-  visa application new page works
-</p>
+<content-wrapper>
+  <content-section>
+    <div class="content-list">
+      <div class="row content-list-head">
+        <div class="col-auto">
+          <h3>New Application</h3>
+        </div>
+        <div class="col-md-auto">
+          <button class="btn btn-outline-primary">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </content-section>
+
+  <h6>Step-1</h6>
+
+  <div class="dropzone dz-clickable" (click)="employeeSelectionModal.show()">
+    <div class="dz-message d-flex justify-content-center align-items-center">
+      <i mdIcon>person</i>
+      <span class="ml-1">Choose Employee</span>
+    </div>
+  </div>
+
+  <h6 class="mt-3">Step-2</h6>
+  Choose Country
+
+</content-wrapper>
+
+<employee-selection-modal #employeeSelectionModal></employee-selection-modal>

@@ -26,9 +26,11 @@ export class DetailsComponent {
     }
   ];
 
+  public applicationId = '';
+
   constructor(private activeRoute: ActivatedRoute) {
-    activeRoute.params.subscribe(params => {
-      console.log(params);
+    activeRoute.params.subscribe(({id}) => {
+      this.applicationId = id;
     });
   }
 }

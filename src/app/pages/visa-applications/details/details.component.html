@@ -1,5 +1,60 @@
 <app-bread-crumb [items]="breadCrumb"></app-bread-crumb>
 
-<p>
-  visa application detail works
-</p>
+<content-wrapper>
+
+  <content-section>
+    <div class="content-list">
+      <div class="row content-list-head">
+        <div class="col-auto">
+          <h3>{{applicationId}}</h3>
+        </div>
+        <div class="col-md-auto">
+          <button class="btn btn-outline-primary">
+            Add Document
+          </button>
+        </div>
+      </div>
+    </div>
+  </content-section>
+
+  <ol class="list-group list-group-activity">
+    <li class="list-group-item">
+      <div class="media align-items-center">
+        <ul class="avatars">
+          <li>
+            <div class="avatar bg-primary">
+              <i mdIcon>insert_drive_file</i>
+            </div>
+          </li>
+        </ul>
+        <div class="media-body d-flex justify-content-between align-items-center">
+          <div>
+            <div>
+              <a [routerLink]="['asdf-1234']" data-filter-by="text" class="A-filter-by-text">Jane Doe</a>
+              <span class="ml-1 badge badge-warning badge-sm">Draft</span>
+            </div>
+            <span class="text-small text-dark">Somalia</span>
+          </div>
+          <!-- file info -->
+          <div class="d-flex">
+            <span class="text-small text-muted">Saved 2 days ago</span>
+            <div class="dropdown">
+              <button class="btn-options" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">more_vert</i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-136px, 24px, 0px); top: 0px; left: 0px; will-change: transform;">
+                  <a class="dropdown-item" href="#">Edit</a>
+                  <a class="dropdown-item" href="#">Share</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-danger" href="#">Delete</a>
+              </div>
+            </div>
+          </div>
+          <!-- dropdown -->
+        </div>
+        <!-- media-body -->
+      </div>
+    </li>
+  </ol>
+
+</content-wrapper>
