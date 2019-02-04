@@ -1,24 +1,24 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {SharedModule} from '@shared/shared.module';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { SharedModule } from "@shared/shared.module";
 
-import {ManageComponent} from './manage.component';
+import { ManageComponent } from "./manage.component";
+import { AddEmployeeModalComponent } from "../components";
 
 const routes: Routes = [
   {
-    path: '',
+    path: "",
     component: ManageComponent
   }
 ];
 
 @NgModule({
-  imports: [ RouterModule.forChild(routes) ]
+  imports: [RouterModule.forChild(routes)]
 })
 export class EmployeesManageRoutingModule {}
 
-
 @NgModule({
-  declarations: [ ManageComponent ],
-  imports: [ SharedModule, EmployeesManageRoutingModule ]
+  declarations: [ManageComponent, AddEmployeeModalComponent],
+  imports: [SharedModule, EmployeesManageRoutingModule]
 })
 export class EmployeesManageModule {}

@@ -4,7 +4,10 @@ import {
   OnInit,
   EventEmitter,
   Output,
-  OnDestroy
+  OnDestroy,
+  ViewChild,
+  ElementRef,
+  Renderer2
 } from "@angular/core";
 
 declare var $: any;
@@ -16,13 +19,19 @@ declare var $: any;
 export class BaseModal implements OnInit, OnDestroy {
   @Input() modalId = "";
   @Input() title = "";
+  @Input() size = ""
   @Input() footerDefault = true;
   @Input() headerDefault = true;
 
   @Output() confirm: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() close: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor() {}
+  @ViewChild('modalAlert') modalAlert: ElementRef;
+
+  public loadingState = false;
+  public alertState = false;
+
+  constructor(private renderer: Renderer2) {}
 
   ngOnDestroy() {
     $(this.baseModalId).modal("dispose");
@@ -32,9 +41,22 @@ export class BaseModal implements OnInit, OnDestroy {
     if (!this.modalId.length) {
       throw new Error("Modal id is mandatory");
     }
+
+    this.alertState = false;
+  }
+
+  public alert(message: string, type: string): void {
+    this.alertState = true;
+    this.renderer.addClass(this.modalAlert.nativeElement, `alert-${type}`);
+    this.renderer.createText(message);
+  }
+
+  public toggleLoading(): void {
+    this.loadingState = !this.loadingState;
   }
 
   public show() {
+    this.alertState = false;
     $(this.baseModalId).modal("show");
   }
 

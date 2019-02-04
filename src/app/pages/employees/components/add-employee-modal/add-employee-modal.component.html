@@ -1,0 +1,69 @@
+<base-modal
+  #addEmployeeModal
+  modalId="add-employee-modal"
+  title="New Employee Profile"
+  [footerDefault]="false"
+  size="modal-lg"
+  >
+  <base-modal-body> 
+    <form [formGroup]="form">
+      <div>
+        <!-- <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i mdIcon>person</i>
+            </span>
+          </div>
+          <input formControl placeholder="Recipient email address" ariaLabel="Recipient email address" describedby="recipient-email-address">
+        </div> -->
+
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" class="form-control" formControlName="fullName" describedBy="fullname" placeholder="Full name i.e. John Doe">
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+
+        <div class="form-group">
+          <label for="designation">Designation</label>
+          <input type="text" class="form-control" formControlName="designation" describedBy="designation">
+          <small class="form-text text-muted">i.e. (Software Development Enigneer)</small>
+        </div>
+
+        <div class="form-group">
+          <label for="employeeId">Employee Id</label>
+          <input type="text" class="form-control" formControlName="employeeId" describedBy="employee id">
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="passport">Passport</label>
+              <input type="text" class="form-control" formControlName="passport" describedBy="passport">
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <label for="cnic">CNIC</label>
+              <input type="text" class="form-control" formControlName="cnic">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea rows="3" class="form-control" formControlName="address"></textarea>
+        </div>
+      </div>
+    </form>
+  </base-modal-body>
+
+  <base-modal-footer>
+    <button role="button" class="btn btn-default" (click)="form.reset()">
+      Reset
+    </button>
+    <button role="button" class="btn btn-primary" (click)="onAddEmployee()">
+      Add Employee
+    </button>
+  </base-modal-footer>
+</base-modal>

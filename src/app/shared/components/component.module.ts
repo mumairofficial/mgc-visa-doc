@@ -12,9 +12,10 @@ import { PageHeaderComponent } from '@shared/components/page-header/page-header.
 
 import * as baseModal from './base-modal';
 import { MdIconComponent } from './md-icon/md-icon.component';
+import { NgxLoadingModule } from 'ngx-loading';
 
 @NgModule({
-  imports: [CommonModule, RouterModule, DirectiveModule],
+  imports: [CommonModule, RouterModule, DirectiveModule, NgxLoadingModule],
   declarations: [
     BreadCrumbComponent,
     ContentWrapperComponent,
@@ -38,7 +39,8 @@ import { MdIconComponent } from './md-icon/md-icon.component';
     baseModal.ModalBodyComponent,
     baseModal.ModalFooterComponent,
     MdIconComponent,
-    DirectiveModule
+    DirectiveModule,
+    NgxLoadingModule
   ]
 })
 export class ComponentsModule {}

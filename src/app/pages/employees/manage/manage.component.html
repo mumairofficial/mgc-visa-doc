@@ -6,7 +6,7 @@
       <div class="row content-list-head">
         <div class="col-auto">
           <h3>Employees</h3>
-          <button class="btn btn-round" data-toggle="modal" data-target="#user-invite-modal">
+          <button class="btn btn-round" (click)="newEmployeeModal.show()">
             <i class="material-icons">add</i>
           </button>
         </div>
@@ -62,3 +62,5 @@
   </ol>
 
 </content-wrapper>
+
+<add-employee-modal #newEmployeeModal (confirm)="onAddEmployee($event)"></add-employee-modal>
