@@ -1,6 +1,69 @@
 <app-bread-crumb [items]="breadCrumb"></app-bread-crumb>
 
-<p>
+<!-- <p>
   visa application manage page work
   <a [routerLink]="['john-doe']" tooltip="John Doe">Details of John Doe Visa Application</a>
-</p>
+</p> -->
+
+<content-wrapper>
+  <content-section>
+    <div class="content-list">
+      <div class="row content-list-head">
+        <div class="col-auto">
+          <h3>Applications</h3>
+          <button class="btn btn-round">
+            <i mdIcon>add</i>
+          </button>
+        </div>
+        <div class="col-md-auto">
+          <div class="input-group input-group-round">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="material-icons">filter_list</i>
+              </span>
+            </div>
+            <input type="search" class="form-control filter-list-input" placeholder="Filter" aria-label="Filter User" aria-describedby="filter-projects">
+          </div>
+        </div>
+      </div>
+    </div>
+  </content-section>
+
+  <ol class="list-group list-group-activity">
+    <li class="list-group-item">
+      <div class="media align-items-center">
+        <ul class="avatars">
+          <li>
+            <div class="avatar bg-primary">
+              <i mdIcon>insert_drive_file</i>
+            </div>
+          </li>
+        </ul>
+        <div class="media-body">
+          <div>
+            <span class="h6">Author </span><span>performed action </span><a href="#">In item</a>
+          </div>
+          <span class="text-small">Date</span>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="media align-items-center">
+        <ul class="avatars">
+          <li>
+            <div class="avatar bg-primary">
+              <i class="material-icons">person</i>
+            </div>
+          </li>
+        </ul>
+        <div class="media-body">
+          <div>
+            <span class="h6">Author </span><span>performed action </span><a href="#">In item</a>
+          </div>
+          <span class="text-small">Date</span>
+        </div>
+      </div>
+    </li>
+  </ol>
+
+</content-wrapper>
