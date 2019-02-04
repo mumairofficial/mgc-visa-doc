@@ -11,9 +11,6 @@
       <div class="row content-list-head">
         <div class="col-auto">
           <h3>Applications</h3>
-          <button class="btn btn-round">
-            <i mdIcon>add</i>
-          </button>
         </div>
         <div class="col-md-auto">
           <div class="input-group input-group-round">
@@ -22,7 +19,7 @@
                 <i class="material-icons">filter_list</i>
               </span>
             </div>
-            <input type="search" class="form-control filter-list-input" placeholder="Filter" aria-label="Filter User" aria-describedby="filter-projects">
+            <input type="search" class="form-control filter-list-input" placeholder="Filter">
           </div>
         </div>
       </div>
@@ -39,29 +36,32 @@
             </div>
           </li>
         </ul>
-        <div class="media-body">
+        <div class="media-body d-flex justify-content-between align-items-center">
           <div>
-            <span class="h6">Author </span><span>performed action </span><a href="#">In item</a>
-          </div>
-          <span class="text-small">Date</span>
-        </div>
-      </div>
-    </li>
-    <li class="list-group-item">
-      <div class="media align-items-center">
-        <ul class="avatars">
-          <li>
-            <div class="avatar bg-primary">
-              <i class="material-icons">person</i>
+            <div>
+              <a href="#" data-filter-by="text" class="A-filter-by-text">Jane Doe</a>
+              <span class="ml-1 badge badge-info badge-sm">Draft</span>
             </div>
-          </li>
-        </ul>
-        <div class="media-body">
-          <div>
-            <span class="h6">Author </span><span>performed action </span><a href="#">In item</a>
+            <span class="text-small text-dark">Somalia</span>
           </div>
-          <span class="text-small">Date</span>
+          <!-- file info -->
+          <div class="d-flex">
+            <span class="text-small text-muted">Saved 2 days ago</span>
+            <div class="dropdown">
+              <button class="btn-options" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">more_vert</i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-136px, 24px, 0px); top: 0px; left: 0px; will-change: transform;">
+                  <a class="dropdown-item" href="#">Edit</a>
+                  <a class="dropdown-item" href="#">Share</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-danger" href="#">Delete</a>
+              </div>
+            </div>
+          </div>
+          <!-- dropdown -->
         </div>
+        <!-- media-body -->
       </div>
     </li>
   </ol>
